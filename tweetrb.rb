@@ -6,11 +6,11 @@ require 'json'
 def sendtweet(tweet)
 
     consumer_key = OAuth::Consumer.new(
-      "EjKbSR9RyLaCiCCovP0QbABB5",
-      "K0jjXdnJL3wnlNxz2Ns5BCBCyM0ztuzPa1M6PnZkFFbX6CBz25")
+      "",
+      "")
     access_token = OAuth::Token.new(
-      "595581442-tupyhJj8ZhRtEGnlcwpudzo3Ikf83G96XFH1kCEu",
-      "kV3e6cRXrIwX6J9eZDXqWV03kZPqjfVQtDV0vQ0bkrckQ")
+      "",
+      "")
 
     baseurl = "https://api.twitter.com"
     path    = "/1.1/statuses/update.json"
