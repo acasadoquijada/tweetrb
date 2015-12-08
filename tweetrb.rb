@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'oauth'
+require 'green_shoes'
 require 'json'
 
 #Send tweet function, based on https://www.codecademy.com/
@@ -40,7 +41,17 @@ def sendtweet(tweet)
 
 end
 
+#########################################################################
 
-#Main
-sendtweet("Este tweet va a ser borrado")
+Shoes.app :title => "tweetrb",
+          :width => 320,
+          :height => 240 do
+
+    para "Enter tweet"
+    @tweet = edit_line
+    button "send tweet" do
+        tweet = @tweet.text
+        sendtweet(tweet)
+    end
+end
 
